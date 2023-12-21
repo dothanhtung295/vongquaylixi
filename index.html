@@ -123,7 +123,10 @@
     <div class="before" style="z-index: 9999"></div>
     <div class="after"></div>
 </div>
-<div class='falling-leaves'></div>
+<div class='falling-leaves relative'>
+    <canvas id="canvas2" style="width: 100%; height: 100%; position: absolute;"></canvas>
+
+</div>
 <body>
     <div class="topheader">
         <img class="responsive" id="myImg" onclick="changeSetting()" style="z-index:99;top:50px;" src="img/hea2.png" />
@@ -154,7 +157,7 @@
     </div>
 
     <img class="responsive2" style="position:fixed;z-index:99;top:0px;right:0px" src="img/hea1.png" />
-    <div style="position:fixed;z-index:99;bottom:-50px;left:0;background:url(img/bot1.png) repeat-x bottom left;"></div>
+    <div style="position:fixed;z-index:99;bottom:-50px;left:0; background:url(img/bot1.png) repeat-x bottom left;"></div>
     <img class="responsive3" style="position:fixed;z-index:99;bottom:20px;left:20px" src="img/bot2.png" />
     <div class="nutcaidat" style="position:fixed;bottom:0px;left:20px" onClick="mopopup()"></div>
     <input type="range" id="range" style="position:fixed;bottom:2px;right:20px;z-index: 999" onmousemove="laypower()" touchmousemove="laypower()" min="0" step="0.001" max="1" value="0.3">
@@ -173,6 +176,8 @@
     <audio id="matluot"><source src="sound/matluot.mp3" type="audio/mpeg"></audio>
     <!-- <audio id="nhac" autoplay="true" loop="true"><source src="sound/nhac.mp3" type="audio/mpeg"></audio> -->
 </body>
+<script src="./js/firework.js"></script>
+
 <script>
     const range = document.getElementById('range');
 
